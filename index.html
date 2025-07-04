@@ -2,30 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>References – CSD Poster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>References - CSD Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
       max-width: 800px;
-      margin: 2em auto;
-      padding: 1em;
-      line-height: 1.6;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
     h1 {
       text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+    }
+    ol {
+      counter-reset: ref-counter;
+      padding: 0;
     }
     li {
-      margin-bottom: 1em;
+      list-style: none;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #fafafa;
+      border-left: 4px solid #004080;
+      border-radius: 4px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    li:hover {
+      background-color: #e6f0ff;
+      transform: scale(1.01);
+    }
+    li:before {
+      counter-increment: ref-counter;
+      content: "[" counter(ref-counter) "] ";
+      font-weight: 600;
+      color: #004080;
+      margin-right: 5px;
+    }
+    .field {
+      margin: 5px 0;
+    }
+    .field strong {
+      display: inline-block;
+      width: 90px;
+      color: #555;
+    }
+    a {
+      color: #004080;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: #003060;
     }
   </style>
 </head>
 <body>
-  <h1>References for Poster</h1>
-  <ol>
-    <li>Che et al. <em>Fast Virtual Gate Extraction for Silicon Quantum Dot Devices</em>, 2024.</li>
-    <li>Mills et al. <em>Computer-automated tuning procedures for semiconductor quantum dot arrays</em>, 2019.</li>
-    <li>Weber et al. <em>QDA²: Structure-Aware Annotation of Charge Stability Diagrams</em>, 2023.</li>
-    <li>Yon et al. <em>Robust Quantum Dot Charge Autotuning using Neural Network Uncertainty</em>, 2024.</li>
-  </ol>
+  <div class="container">
+    <h1>References</h1>
+    <ol>
+      <li>
+        <div class="field"><strong>Author:</strong> Foulk, Nathan L.; Das Sarma, Sankar</div>
+        <div class="field"><strong>Title:</strong> Theory of charge stability diagrams in coupled quantum dot qubits</div>
+        <div class="field"><strong>Journal:</strong> Physical Review B</div>
+        <div class="field"><strong>Year:</strong> 2024</div>
+        <div class="field"><strong>Volume:</strong> 110</div>
+        <div class="field"><strong>Number:</strong> 20</div>
+        <div class="field"><strong>DOI:</strong> <a href="http://dx.doi.org/10.1103/PhysRevB.110.205428" target="_blank">10.1103/PhysRevB.110.205428</a></div>
+      </li>
+      <li>
+        <div class="field"><strong>Author:</strong> Nanoacademic Technologies</div>
+        <div class="field"><strong>Title:</strong> Quantum transport—Charge stability diagram of a double quantum dot</div>
+        <div class="field"><strong>Year:</strong> 2023</div>
+        <div class="field"><strong>URL:</strong> <a href="https://docs.nanoacademic.com/qtcad/tutorials/transport/double_dot_stability/" target="_blank">Link</a></div>
+      </li>
+      <li>
+        <div class="field"><strong>Author:</strong> Che, Shize; Oh, Seong W.; Qin, Haoyun; Liu, Yuhao; Sigillito, Anthony; Li, Gushu</div>
+        <div class="field"><strong>Title:</strong> Fast Virtual Gate Extraction For Silicon Quantum Dot Devices</div>
+        <div class="field"><strong>Year:</strong> 2024</div>
+        <div class="field"><strong>arXiv:</strong> <a href="https://arxiv.org/abs/2409.15181" target="_blank">2409.15181</a></div>
+      </li>
+      <li>
+        <div class="field"><strong>Author:</strong> Mills, A. R. et al.</div>
+        <div class="field"><strong>Title:</strong> Computer-automated tuning procedures for semiconductor quantum dot arrays</div>
+        <div class="field"><strong>Journal:</strong> Applied Physics Letters</div>
+        <div class="field"><strong>Year:</strong> 2019</div>
+        <div class="field"><strong>DOI:</strong> <a href="http://dx.doi.org/10.1063/1.5121444" target="_blank">10.1063/1.5121444</a></div>
+      </li>
+      <li>
+        <div class="field"><strong>Author:</strong> Weber, Brian; Zwolak, Justyna P.</div>
+        <div class="field"><strong>Title:</strong> QDA$^2$: A principled approach to automatically annotating charge stability diagrams</div>
+        <div class="field"><strong>Year:</strong> 2023</div>
+        <div class="field"><strong>arXiv:</strong> <a href="https://arxiv.org/abs/2312.11206" target="_blank">2312.11206</a></div>
+      </li>
+      <li>
+        <div class="field"><strong>Author:</strong> Yon, Victor et al.</div>
+        <div class="field"><strong>Title:</strong> Robust quantum dots charge autotuning using neural network uncertainty</div>
+        <div class="field"><strong>Journal:</strong> Machine Learning: Science and Technology</div>
+        <div class="field"><strong>Year:</strong> 2024</div>
+        <div class="field"><strong>DOI:</strong> <a href="http://dx.doi.org/10.1088/2632-2153/ad88d5" target="_blank">10.1088/2632-2153/ad88d5</a></div>
+      </li>
+    </ol>
+  </div>
 </body>
 </html>
